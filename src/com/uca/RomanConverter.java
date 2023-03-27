@@ -30,6 +30,10 @@ public class RomanConverter{
 
 
 	public static String getRomanFromNumber(int n) throws IllegalArgumentException{
+		if(n<=0) {
+			throw new IllegalArgumentException("Number must be > 0");
+		}
+
         String result = "";
         for (RomanNumber symbol : SYMBOLS) {
             while (n >= symbol.getValue()) {
@@ -42,6 +46,10 @@ public class RomanConverter{
 	
 
 	public static int getNumberFromRoman(String a) throws IllegalArgumentException{
+		if (a.length() == 0)
+		{
+			throw new IllegalArgumentException("String must be not empty");
+		}
         int result = 0;
         int index = 0;
         for (RomanNumber symbol : SYMBOLS) {
