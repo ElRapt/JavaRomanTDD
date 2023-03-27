@@ -46,9 +46,9 @@ public class RomanConverter{
 	
 
 	public static int getNumberFromRoman(String a) throws IllegalArgumentException{
-		if (a.length() == 0)
+		if (a.length() == 0 || !VALIDATION_RE.matcher(a).matches())
 		{
-			throw new IllegalArgumentException("String must be not empty");
+			throw new IllegalArgumentException("String is not a roman number");
 		}
         int result = 0;
         int index = 0;

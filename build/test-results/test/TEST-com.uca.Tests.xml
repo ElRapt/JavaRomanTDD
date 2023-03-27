@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.uca.Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-27T08:25:53" hostname="sci-003-08l" time="0.019">
+<testsuite name="com.uca.Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-27T10:09:36" hostname="PC-Lucas" time="0.1">
   <properties/>
-  <testcase name="testConverter()" classname="com.uca.Tests" time="0.019"/>
+  <testcase name="testConverter()" classname="com.uca.Tests" time="0.1"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
