@@ -10,8 +10,19 @@ public class Tests {
 	@Test
 	public void testConverter(){
 		assertThat(RomanConverter.getRomanFromNumber(4), equalTo("IV"));
+        assertThat(RomanConverter.getNumberFromRoman("IV"), equalTo(4));
         assertThat(RomanConverter.getRomanFromNumber(9), equalTo("IX"));
+        assertThat(RomanConverter.getNumberFromRoman("IX"), equalTo(9));
+        assertThat(RomanConverter.getRomanFromNumber(40), equalTo("XL"));
+        assertThat(RomanConverter.getNumberFromRoman("XL"), equalTo(40));
+        assertThat(RomanConverter.getRomanFromNumber(600), equalTo("DC"));
+        assertThat(RomanConverter.getNumberFromRoman("DC"), equalTo(600));
+        assertThat(RomanConverter.getRomanFromNumber(400), equalTo("CD"));
+        assertThat(RomanConverter.getNumberFromRoman("CD"), equalTo(400));
 		assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(-2)), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(4001)), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(0)), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("")), instanceOf(IllegalArgumentException.class));
 	}
     
 	//TODO : les autres tests

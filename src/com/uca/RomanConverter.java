@@ -30,8 +30,8 @@ public class RomanConverter{
 
 
 	public static String getRomanFromNumber(int n) throws IllegalArgumentException{
-		if(n<=0) {
-			throw new IllegalArgumentException("Number must be > 0");
+		if(n<=0 || n>= 4000) {
+			throw new IllegalArgumentException("Number must be in [1:3999]");
 		}
 
         String result = "";
