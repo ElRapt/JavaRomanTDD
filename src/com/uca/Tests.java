@@ -34,7 +34,7 @@ public class Tests {
         assertThat(RomanConverter.getNumberFromRoman("MMMCMXCIX"), equalTo(3999));       
 
 		assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(-2)), instanceOf(IllegalArgumentException.class));
-        assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(4001)), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(4000)), instanceOf(IllegalArgumentException.class));
         assertThat(exceptionOf(() -> RomanConverter.getRomanFromNumber(0)), instanceOf(IllegalArgumentException.class));
         assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("")), instanceOf(IllegalArgumentException.class));
         assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("0XV")), instanceOf(IllegalArgumentException.class));
