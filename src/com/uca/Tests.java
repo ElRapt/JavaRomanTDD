@@ -39,11 +39,21 @@ public class Tests {
         assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("")), instanceOf(IllegalArgumentException.class));
         assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("0XV")), instanceOf(IllegalArgumentException.class));
         assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("XVXV")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(() -> RomanConverter.getNumberFromRoman("IIII")), instanceOf(IllegalArgumentException.class));
+        
+
+        for(int i =1; i<3999; i++)
+        {
+            assertThat(RomanConverter.getNumberFromRoman(RomanConverter.getRomanFromNumber(i)), equalTo(i));
+        }
 	}
     
 	//TODO : les autres tests
 	
-
+    @Test
+    public void numberConverter()
+    {
+    }
 
     //Help you to handle exception. :-)
     public static Throwable exceptionOf(Callable<?> callable) {
