@@ -71,6 +71,10 @@ public class Tests {
         assertThat(twelve.compareTo(twelve2), equalTo(0));
         assertThat(twelve.compareTo(thirteen), equalTo(-1));
         assertThat(thirteen.compareTo(twelve), equalTo(1));
+
+        assertThat(twelve.compareTo(12), equalTo(0));
+        assertThat(twelve.compareTo(13), equalTo(-1));
+        assertThat(thirteen.compareTo(12), equalTo(1));
     }
     //Help you to handle exception. :-)
     public static Throwable exceptionOf(Callable<?> callable) {

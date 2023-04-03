@@ -55,6 +55,18 @@ public class RomanNumber extends Number implements Comparable<RomanNumber>{
         return -1;        
 
     }
+
+    public int compareTo(int other) {
+
+        int compareToEmp = other;
+
+        if (this.value == other) return 0;
+
+        if (this.value > other) return 1;
+
+        return -1;        
+
+    }
 	
 	
 	
