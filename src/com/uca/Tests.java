@@ -53,8 +53,25 @@ public class Tests {
     @Test
     public void numberConverter()
     {
+        RomanNumber twelve = new RomanNumber("XII");
+        assertThat(twelve.floatValue(), equalTo(12.0f));
+        assertThat(twelve.doubleValue(), equalTo(12.0));
+        assertThat(twelve.intValue(), equalTo(12));
+        assertThat(twelve.longValue(), equalTo(12L));
+        assertThat(twelve.toString(), equalTo("This roman number is equal to " + twelve.getValue() + " in decimal and " + twelve.getRoman() + " in roman"));
     }
 
+    @Test
+    public void compareTo()
+    {
+        RomanNumber twelve = new RomanNumber("XII");
+        RomanNumber thirteen = new RomanNumber("XIII");
+        RomanNumber twelve2 = new RomanNumber("XII");
+
+        assertThat(twelve.compareTo(twelve2), equalTo(0));
+        assertThat(twelve.compareTo(thirteen), equalTo(-1));
+        assertThat(thirteen.compareTo(twelve), equalTo(1));
+    }
     //Help you to handle exception. :-)
     public static Throwable exceptionOf(Callable<?> callable) {
         try {
