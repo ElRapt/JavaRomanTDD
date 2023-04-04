@@ -1,4 +1,4 @@
-### JavaAgileRomanNumbers
+### JavaRomanTDD
 
 Implementation of Roman numbers in Java a Test Driven Development method, made during my Computer Science Degree.
 Uses gradle.
